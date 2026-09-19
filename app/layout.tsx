@@ -25,7 +25,7 @@ const playfairDisplay = Playfair_Display({
 
 export const metadata: Metadata = {
   title: {
-    default: "BrewVerse — Where Every Sip Tells a Story",
+    default: "BrewVerse Coffee Company",
     template: "%s | BrewVerse Coffee",
   },
   description:
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     "specialty coffee",
   ],
   openGraph: {
-    title: "BrewVerse — Where Every Sip Tells a Story",
+    title: "BrewVerse Coffee Company",
     description:
       "Craft-roasted coffee, community spaces, and culture. BrewVerse is more than a café — it's where stories begin.",
     type: "website",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "BrewVerse — Where Every Sip Tells a Story",
+    title: "BrewVerse Coffee Company",
     description:
       "Craft-roasted coffee, community spaces, and culture. BrewVerse is more than a café — it's where stories begin.",
   },

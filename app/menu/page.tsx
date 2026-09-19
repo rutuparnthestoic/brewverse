@@ -203,9 +203,7 @@ export default function MenuPage() {
                       )}
 
                       {/* Price badge */}
-                      <div className="absolute top-3 right-3 px-2.5 py-1 bg-forest/90 backdrop-blur-sm rounded-full text-xs font-bold text-cream">
-                        {item.price}
-                      </div>
+                      
                     </div>
 
                     {/* Content */}

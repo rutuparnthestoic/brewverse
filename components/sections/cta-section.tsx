@@ -12,7 +12,7 @@ export function CTASection() {
       id="cta-section"
       style={{
         background:
-          "linear-gradient(135deg, #064E3B 0%, #1a5c3a 40%, #10B981 100%)",
+          "linear-gradient(135deg, #2D1C15 0%, #4A3B37 40%, #9A6040 100%)",
       }}
     >
       {/* Floating decorative elements */}

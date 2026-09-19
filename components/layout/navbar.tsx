@@ -51,24 +51,26 @@ export function Navbar() {
         }`}
       >
         <nav className="container-bv flex items-center justify-between h-20">
+          {/* SVG Filter for exact Espresso color (#2D1C15 -> rgb(45, 28, 21) -> 0.176, 0.110, 0.082) */}
+          <svg width="0" height="0" className="absolute pointer-events-none">
+            <filter id="colorize-forest">
+              <feColorMatrix type="matrix" values="
+                0 0 0 0.176 0
+                0 0 0 0.110 0
+                0 0 0 0.082 0
+                0 0 0 1 0" 
+              />
+            </filter>
+          </svg>
+
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2.5 group" id="nav-logo">
-            <div
-              className={`flex items-center justify-center w-10 h-10 rounded-xl transition-all duration-500 ${
-                isScrolled
-                  ? "bg-forest text-white"
-                  : "bg-white/20 backdrop-blur-sm text-white"
-              } group-hover:scale-110`}
-            >
-              <Coffee className="w-5 h-5" strokeWidth={2.5} />
-            </div>
-            <span
-              className={`font-heading text-xl font-bold tracking-tight transition-colors duration-500 ${
-                isScrolled ? "text-espresso" : "text-white"
-              }`}
-            >
-              BrewVerse
-            </span>
+          <Link href="/" className="flex items-center group py-2 mt-1 md:mt-0" id="nav-logo">
+            <img 
+              src="/images/logo.png" 
+              alt="BrewVerse Logo" 
+              className="h-12 md:h-14 w-auto object-contain transition-transform duration-500 group-hover:scale-105"
+              style={{ filter: isScrolled ? "url(#colorize-forest)" : "none" }}
+            />
           </Link>
 
           {/* Desktop Navigation */}

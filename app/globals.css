@@ -7,23 +7,24 @@
 
 /* Static color tokens — resolved at build time */
 @theme {
-  --color-forest: #064E3B;
-  --color-sage: #10B981;
-  --color-matcha: #A7F3D0;
-  --color-cream: #FFFFFF;
-  --color-latte: #D97706;
-  --color-espresso: #022C22;
-  --color-oat: #F3F4F6;
-  --color-charcoal: #374151;
-  --color-gold: #F59E0B;
-  --color-background: #FFFFFF;
-  --color-foreground: #374151;
-  --color-primary: #064E3B;
-  --color-primary-light: #10B981;
-  --color-accent: #A7F3D0;
-  --color-accent-warm: #D97706;
-  --color-surface: #F3F4F6;
-  --color-heading: #022C22;
+  --color-white: #ffffff;
+  --color-forest: #2D1C15;
+  --color-sage: #9A6040;
+  --color-matcha: #E3CDB8;
+  --color-cream: #FCFAFC;
+  --color-latte: #B86C35;
+  --color-espresso: #1C1311;
+  --color-oat: #F4EFEA;
+  --color-charcoal: #4A3B37;
+  --color-gold: #CF9553;
+  --color-background: #FCFAFC;
+  --color-foreground: #4A3B37;
+  --color-primary: #2D1C15;
+  --color-primary-light: #9A6040;
+  --color-accent: #E3CDB8;
+  --color-accent-warm: #B86C35;
+  --color-surface: #F4EFEA;
+  --color-heading: #1C1311;
 }
 
 /* Font tokens — must be inline because Next.js injects these at runtime */
@@ -54,138 +55,149 @@
   --radius-full: 9999px;
 
   /* Shadows */
-  --shadow-sm: 0 1px 2px rgba(27, 67, 50, 0.05);
-  --shadow-md: 0 4px 12px rgba(27, 67, 50, 0.08);
-  --shadow-lg: 0 8px 30px rgba(27, 67, 50, 0.12);
-  --shadow-xl: 0 16px 50px rgba(27, 67, 50, 0.16);
+  --shadow-sm: 0 1px 2px rgba(45, 28, 21, 0.05);
+  --shadow-md: 0 4px 12px rgba(45, 28, 21, 0.08);
+  --shadow-lg: 0 8px 30px rgba(45, 28, 21, 0.12);
+  --shadow-xl: 0 16px 50px rgba(45, 28, 21, 0.16);
 }
 
 /* ============================================
    Base Resets & Typography
    ============================================ */
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
 
-html {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-  scroll-behavior: auto; /* Lenis handles smooth scroll */
-}
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: auto; /* Lenis handles smooth scroll */
+  }
 
-body {
-  background-color: var(--color-background);
-  color: var(--color-foreground);
-  font-family: var(--font-inter), system-ui, sans-serif;
-  line-height: 1.6;
-  overflow-x: hidden;
-}
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-inter), system-ui, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-outfit), system-ui, sans-serif;
-  line-height: 1.1;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-outfit), system-ui, sans-serif;
+    line-height: 1.1;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
 
-h1 {
-  font-size: clamp(2.5rem, 6vw, 5rem);
-}
+  h1 {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+  }
 
-h2 {
-  font-size: clamp(2rem, 4vw, 3.5rem);
-}
+  h2 {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+  }
 
-h3 {
-  font-size: clamp(1.5rem, 3vw, 2rem);
-}
+  h3 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+  }
 
-p {
-  max-width: 65ch;
-  line-height: 1.7;
-}
+  p {
+    max-width: 65ch;
+    line-height: 1.7;
+  }
 
-a {
-  color: inherit;
-  text-decoration: none;
-  transition: color var(--transition-fast);
-}
+  a {
+    color: inherit;
+    text-decoration: none;
+    transition: color var(--transition-fast);
+  }
 
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
 
-/* ============================================
-   Custom Scrollbar
-   ============================================ */
+  /* ============================================
+     Custom Scrollbar
+     ============================================ */
 
-::-webkit-scrollbar {
-  width: 8px;
-}
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
 
-::-webkit-scrollbar-track {
-  background: #FFFFFF;
-}
+  ::-webkit-scrollbar-track {
+    background: #FCFAFC;
+  }
 
-::-webkit-scrollbar-thumb {
-  background: #10B981;
-  border-radius: var(--radius-full);
-}
+  ::-webkit-scrollbar-thumb {
+    background: #9A6040;
+    border-radius: var(--radius-full);
+  }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #064E3B;
-}
+  ::-webkit-scrollbar-thumb:hover {
+    background: #2D1C15;
+  }
 
-/* Firefox */
-* {
-  scrollbar-width: thin;
-  scrollbar-color: #10B981 #FFFFFF;
-}
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #9A6040 #FCFAFC;
+  }
 
-/* ============================================
-   Selection Styling
-   ============================================ */
+  /* ============================================
+     Selection Styling
+     ============================================ */
 
-::selection {
-  background-color: #A7F3D0;
-  color: #064E3B;
+  ::selection {
+    background-color: #E3CDB8;
+    color: #2D1C15;
+  }
 }
 
 /* ============================================
    Utility Classes
    ============================================ */
 
-.container-bv {
-  max-width: var(--container-max);
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: var(--container-padding);
-  padding-right: var(--container-padding);
-}
+@layer utilities {
+  .container-bv {
+    max-width: var(--container-max);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
+  }
 
-.section-padding {
-  padding-top: var(--section-padding);
-  padding-bottom: var(--section-padding);
-}
+  .section-padding {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+  }
 
-.text-gradient {
-  background: linear-gradient(135deg, #064E3B, #10B981);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
+  .text-gradient {
+    background: linear-gradient(135deg, #2D1C15, #9A6040);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
 
-.text-gradient-warm {
-  background: linear-gradient(135deg, #D97706, #022C22);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  .text-gradient-alt {
+    background: linear-gradient(135deg, #CF9553, #1C1311);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-warm {
+    background: linear-gradient(135deg, #CF9553, #1C1311);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
 }
 
 /* ============================================

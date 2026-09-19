@@ -35,10 +35,30 @@ const footerLinks = {
   ],
 };
 
+const InstagramIcon = ({ className }: { className?: string }) => (
+  <svg 
+    xmlns="http://www.w3.org/2000/svg" 
+    width="24" 
+    height="24" 
+    viewBox="0 0 24 24" 
+    fill="none" 
+    stroke="currentColor" 
+    strokeWidth="2" 
+    strokeLinecap="round" 
+    strokeLinejoin="round" 
+    className={className}
+  >
+    <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+  </svg>
+);
+
 const socialLinks = [
   { href: "#", icon: Globe, label: "Website" },
   { href: "#", icon: MessageCircle, label: "Chat" },
   { href: "#", icon: Share2, label: "Share" },
+  { href: "https://www.instagram.com/whodo.do?utm_source=qr&stkn=dHdiaGppNnV2Mnc3", icon: InstagramIcon, label: "Instagram" },
 ];
 
 export function Footer() {
@@ -111,13 +131,12 @@ export function Footer() {
           {/* Brand Column */}
           <div className="col-span-2 md:col-span-4 lg:col-span-1 mb-4 lg:mb-0">
             <FadeIn delay={0}>
-              <Link href="/" className="flex items-center gap-2.5 mb-5 group">
-                <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-cream/10 group-hover:bg-cream/20 transition-all duration-300">
-                  <Coffee className="w-5 h-5 text-matcha" strokeWidth={2.5} />
-                </div>
-                <span className="font-heading text-xl font-bold text-cream">
-                  BrewVerse
-                </span>
+              <Link href="/" className="flex items-center mb-5 group">
+                <img 
+                  src="/images/logo.png" 
+                  alt="BrewVerse Logo" 
+                  className="h-10 md:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                />
               </Link>
               <p className="text-cream/50 text-sm leading-relaxed mb-6 max-w-xs">
                 Where every sip tells a story. Crafted with care, served with soul —

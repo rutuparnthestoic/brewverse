@@ -14,8 +14,7 @@ export function LenisProvider({ children }: LenisProviderProps) {
       options={{
         lerp: 0.1,
         duration: 1.4,
-        syncTouch: true,
-        touchMultiplier: 2,
+        smoothWheel: true,
       }}
     >
       {children}

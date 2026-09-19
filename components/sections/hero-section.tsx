@@ -8,7 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowDown } from "lucide-react";
 
-const words = ["Coffee", "Crafted", "for", "the", "Next", "Generation"];
+const words = ["Coffee", "Crafted", "to", "Perfection"];
 
 export function HeroSection() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -72,7 +72,7 @@ export function HeroSection() {
         className="absolute inset-0 z-10"
         style={{
           background:
-            "linear-gradient(to bottom, rgba(27,67,50,0.75) 0%, rgba(27,67,50,0.55) 40%, rgba(27,67,50,0.7) 70%, rgba(27,67,50,0.95) 100%)",
+            "linear-gradient(to bottom, rgba(45 28 21 / 0.75) 0%, rgba(45 28 21 / 0.55) 40%, rgba(45 28 21 / 0.7) 70%, rgba(45 28 21 / 0.95) 100%)",
         }}
       />
 
@@ -127,9 +127,7 @@ export function HeroSection() {
                 ease: [0.16, 1, 0.3, 1],
               }}
               className={`inline-block ${
-                word === "Next" || word === "Generation"
-                  ? "text-matcha"
-                  : ""
+                word === "Perfection" ? "text-matcha" : ""
               }`}
               style={{ perspective: "600px" }}
             >
