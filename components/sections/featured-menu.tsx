@@ -117,9 +117,7 @@ export function FeaturedMenu() {
                   )}
 
                   {/* Price (shows on hover) */}
-                  <div className="absolute bottom-4 right-4 px-3 py-1.5 bg-cream/95 backdrop-blur-sm rounded-full text-sm font-bold text-espresso opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-2 group-hover:translate-y-0">
-                    {drink.price}
-                  </div>
+                  
                 </div>
 
                 {/* Text Content */}
